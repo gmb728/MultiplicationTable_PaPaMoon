@@ -12,6 +12,10 @@
 		DD696EB82143301F0036524D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD696EB62143301F0036524D /* Main.storyboard */; };
 		DD696EBA214330230036524D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD696EB9214330230036524D /* Assets.xcassets */; };
 		DD696EBD214330230036524D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD696EBB214330230036524D /* LaunchScreen.storyboard */; };
+		DD696EC5214333540036524D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD696EC4214333540036524D /* QuestionViewController.swift */; };
+		DDEE141D2147B71D002023C5 /* correct.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DDEE141C2147B71D002023C5 /* correct.mp4 */; };
+		DDEE141F2147B731002023C5 /* incorrect.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DDEE141E2147B731002023C5 /* incorrect.mp4 */; };
+		DDEE14212147BB53002023C5 /* advancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE14202147BB53002023C5 /* advancedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DD696EB9214330230036524D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD696EBC214330230036524D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD696EBE214330230036524D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD696EC4214333540036524D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		DDEE141C2147B71D002023C5 /* correct.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = correct.mp4; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/Desktop/correct.mp4"; sourceTree = "<group>"; };
+		DDEE141E2147B731002023C5 /* incorrect.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = incorrect.mp4; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/Desktop/incorrect.mp4"; sourceTree = "<group>"; };
+		DDEE14202147BB53002023C5 /* advancedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,12 @@
 		DD696EB12143301F0036524D /* MultiplicationTable */ = {
 			isa = PBXGroup;
 			children = (
+				DDEE141C2147B71D002023C5 /* correct.mp4 */,
+				DDEE141E2147B731002023C5 /* incorrect.mp4 */,
 				DD696EB22143301F0036524D /* AppDelegate.swift */,
+				DD696EC4214333540036524D /* QuestionViewController.swift */,
 				DD696EB42143301F0036524D /* ViewController.swift */,
+				DDEE14202147BB53002023C5 /* advancedViewController.swift */,
 				DD696EB62143301F0036524D /* Main.storyboard */,
 				DD696EB9214330230036524D /* Assets.xcassets */,
 				DD696EBB214330230036524D /* LaunchScreen.storyboard */,
@@ -122,8 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDEE141D2147B71D002023C5 /* correct.mp4 in Resources */,
 				DD696EBD214330230036524D /* LaunchScreen.storyboard in Resources */,
 				DD696EBA214330230036524D /* Assets.xcassets in Resources */,
+				DDEE141F2147B731002023C5 /* incorrect.mp4 in Resources */,
 				DD696EB82143301F0036524D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDEE14212147BB53002023C5 /* advancedViewController.swift in Sources */,
 				DD696EB52143301F0036524D /* ViewController.swift in Sources */,
 				DD696EB32143301F0036524D /* AppDelegate.swift in Sources */,
+				DD696EC5214333540036524D /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
