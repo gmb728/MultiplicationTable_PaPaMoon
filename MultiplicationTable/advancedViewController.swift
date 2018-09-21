@@ -21,12 +21,17 @@ class advancedViewController: UIViewController {
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var checkTheAnsImageView: UIImageView!
     @IBOutlet weak var resultTextField: UITextField!
+    @IBOutlet weak var papaImageView: UIImageView!
+    @IBOutlet weak var moonImageView: UIImageView!
+    
+    
     
     let multipliers = ["number_1","number_2","number_3","number_4","number_5","number_6","number_7","number_8","number_9"]
     let multiplcans = ["number_1","number_2","number_3","number_4","number_5","number_6","number_7","number_8","number_9"]
     let signs = ["add","deduct","multiply","divide"]
     
     @IBAction func buttonPressed(_ sender: UIButton) {
+         moonImageView.isHidden = true
         resultTextField.isHidden = true
 //sign
         let randomDistribution = GKRandomDistribution(lowestValue: 1, highestValue: signs.count-1)
@@ -82,28 +87,44 @@ class advancedViewController: UIViewController {
     }
     }
     
-    @IBAction func okButtonPressed(_ sender: UIButton) {view.endEditing(true)
+    @IBAction func okButtonPressed(_ sender: UIButton) {
+
         resultTextField.isHidden = false
         let result:Int? = Int(resultTextField.text!)
         let keyInAns:Int? = Int(keyInAnsTextField.text!)
-        if result == keyInAns{
+        if papaImageView.frame.origin.x == CGFloat(131) &&
+        papaImageView.frame.origin.y == CGFloat(289) {
+            if let url = Bundle.main.url(forResource: "starwar", withExtension: "mp4"){
+                player = AVPlayer(url: url)
+                player?.play()
+            }
+           moonImageView.isHidden = false
+           papaImageView.frame.origin.x = CGFloat(203)
+           papaImageView.frame.origin.y = CGFloat(721)
+        }
+        else if result == keyInAns{
             checkTheAnsImageView.image = UIImage(named: "correct")
             if let url = Bundle.main.url(forResource: "correct", withExtension: "mp4"){
                 player = AVPlayer(url: url)
                 player?.play()
             }
+            papaImageView.frame.origin.x = CGFloat(papaImageView.frame.origin.x-8)
+            papaImageView.frame.origin.y = CGFloat(papaImageView.frame.origin.y-48)
+            
         } else {checkTheAnsImageView.image = UIImage(named: "incorrect")
             if let url = Bundle.main.url(forResource: "incorrect", withExtension: "mp4"){
                 player = AVPlayer(url: url)
                 player?.play()
             }
+            papaImageView.frame.origin.x = CGFloat(papaImageView.frame.origin.x+8)
+            papaImageView.frame.origin.y = CGFloat(papaImageView.frame.origin.y+48)
         }
-        
-    }
+        }
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
     }
 
